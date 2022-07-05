@@ -5,7 +5,7 @@
 {{ $searchConfig := i18n "bookSearchConfig" | default "{}" }}
 
 (function () {
-  const searchDataURL = '{{ $searchData.RelPermalink }}';
+  const searchDataURL = '{{ strings.TrimSuffix "/" .Site.BaseURL }}{{ $searchData.RelPermalink }}';
   const indexConfig = Object.assign({{ $searchConfig }}, {
     doc: {
       id: 'id',
@@ -49,7 +49,7 @@
 
   /**
    * @param {String} character
-   * @returns {Boolean} 
+   * @returns {Boolean}
    */
   function isHotkey(character) {
     const dataHotkeys = input.getAttribute('data-hotkeys') || '';
