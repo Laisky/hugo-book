@@ -4,7 +4,7 @@
 {{ $searchData := resources.Get "search-data.json" | resources.ExecuteAsTemplate $searchDataFile . | resources.Minify | resources.Fingerprint }}
 {{ $searchConfig := i18n "bookSearchConfig" | default "{}" }}
 
-const siteBaseURL = '{{ strings.TrimSuffix "/" .Site.BaseURL }};
+const siteBaseURL = '{{ strings.TrimSuffix "/" .Site.BaseURL }}';
 
 (function () {
   const searchDataURL = siteBaseURL + '{{ $searchData.RelPermalink }}';
