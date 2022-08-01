@@ -1,0 +1,14 @@
+{{ if not (.Page.Scratch.Get "echarts") }}
+<!-- Include echarts only first time -->
+<script src="https://s3.laisky.com/static/echarts/5.3.3/echarts.min.js"></script>
+<script defer src="{{ "echarts.js" | relURL }}"></script>
+
+{{ .Page.Scratch.Set "echarts" true }}
+{{ end }}
+
+
+{{- $content := .Inner | transform.Unmarshal | jsonify -}}
+{{- $id := dict "Content" $content "Scratch" .Page.Scratch | partial "function/id.html" -}}
+{{- $width := cond .IsNamedParams (.Get "width") (.Get 0) | default "80%" -}}
+{{- $height := cond .IsNamedParams (.Get "height") (.Get 1) | default "30rem" -}}
+<div class="echarts" id="echarts-{{ $id }}" style="width: {{ $width }}; height: {{ $height }};">{{ $content }}</div>
