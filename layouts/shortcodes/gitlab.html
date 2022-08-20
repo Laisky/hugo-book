@@ -1,0 +1,40 @@
+{{ if not (.Page.Scratch.Get "gitlab") }}
+<!-- Include only first time -->
+<link rel="stylesheet" href="https://s3.laisky.com/static/highlight/11.6.0/styles/default.min.css">
+<script src="https://s3.laisky.com/static/highlight/11.6.0/highlight.min.js"></script>
+<script src="https://s3.laisky.com/static/highlightjs-line-numbers/2.8.0/highlightjs-line-numbers.min.js"></script>
+<!-- <script src="//cdn.jsdelivr.net/gh/TRSasasusu/highlightjs-highlight-lines.js@1.2.0/highlightjs-highlight-lines.min.js"></script> -->
+<script defer src="{{ "/js/gitlab.js" | relURL }}"></script>
+<link rel="stylesheet" href="{{ "/css/gitlab.css" | relURL }}">
+
+{{ .Page.Scratch.Set "gitlab" true }}
+{{ end }}
+
+<div class="shortcodes-gitlab">
+    <div class="gitlab-embed-snippets">
+        <div class="js-file-title file-title-flex-parent">
+            <div class="file-header-content">
+                <!-- <img
+                alt="GitLab logo"
+                class="gitlab-logo"
+                src="https://gitlab.com/assets/ext_snippet_icons/logo-88d040ec5541207676259c7d6dd92345e719e117099a26d3a1361ade5bbd2b9c.svg"
+                /> -->
+            <strong class="file-title-name">
+                <a
+                class="gitlab-embedded-snippets-title"
+                href="https://gitlab.com/annacoding2020/codes-snippet/-/snippets/1930724"
+                rel="noopener noreferrer"
+                target="_blank"
+                >example.tsx</a>
+            </strong>
+            </div>
+        </div>
+        <figure aria-label="Code snippet" class="file-holder snippet-file-content">
+            <div class="blob-viewer" data-path="example.tsx" data-type="simple">
+            <div class="file-content code js-syntax-highlight">
+            <pre class="code shortcodes-gitlab"><code class="{{ .Get 0 }}">{{ .Inner }}</code></pre>
+            </div>
+            </div>
+        </figure>
+    </div>
+</div>

@@ -1,5 +1,5 @@
 window.onload = function () {
-    document.querySelectorAll(".echarts").forEach(ch => {
+    document.querySelectorAll(".shortcodes-echarts").forEach(ch => {
         const chartID = ch.id;
         const chartOption = JSON.parse(ch.innerHTML);
 
