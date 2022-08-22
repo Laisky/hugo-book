@@ -7,6 +7,10 @@
 <script defer src="{{ "/js/gitlab.js" | relURL }}"></script>
 <link rel="stylesheet" href="{{ "/css/gitlab.css" | relURL }}">
 
+<script>
+    window.API_GITLAB_CODE = "{{ .Site.Params.git_code_seach_api }}";
+</script>
+
 {{ .Page.Scratch.Set "gitlab" true }}
 {{ end }}
 

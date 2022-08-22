@@ -14,7 +14,7 @@ window.onload = function () {
         // fetch and replace code
         let respObj;
         try {
-            const resp = await fetch("http://ramjet.xego-dev.basebit.me/gitlab/file?file=" + encodeURIComponent(gitFileURL));
+            const resp = await fetch(window.API_GITLAB_CODE + "?file=" + encodeURIComponent(gitFileURL));
             if (resp.status != 200) {
                 throw new Error(await resp.text());
             }
