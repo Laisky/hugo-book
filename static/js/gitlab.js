@@ -1,4 +1,4 @@
-window.onload = function () {
+window.addEventListener("load", () => {
     document.querySelectorAll('.shortcodes-gitlab .gitlab-embed-snippets').forEach(async (el) => {
         const codeEle = el.querySelector('pre.shortcodes-gitlab code');
         let gitFileURL = codeEle.innerHTML;
@@ -44,4 +44,4 @@ window.onload = function () {
         //     );
         // }
     });
-};
+});
