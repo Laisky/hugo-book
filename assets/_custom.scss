@@ -13,7 +13,11 @@ main.container {
 
     .markdown code:not(pre code){
         background-color: rgb(232,232,232);
-        font-size: 1em;
+        // font-size: 1em;
+    }
+
+    dl, ol, ul {
+        margin-bottom: 1rem;
     }
 }
 
