@@ -2,6 +2,21 @@
 
 // @import "plugins/numbered";
 
+main.container {
+    max-width: 1280px;
+    line-height: 1.15;
+    font-family: "Microsoft YaHei", "Helvetica Neue", "Helvetica", "Segoe UI", "Arial", "freesans", "sans-serif";
+
+    a {
+        color: #0055bb;
+    }
+
+    .markdown code {
+        background-color: rgb(232,232,232);
+        font-size: 1em;
+    }
+}
+
 .modal {
     .modal-dialog {
         max-width: 80%;
