@@ -22,8 +22,9 @@ main.container {
     }
 
     .book-menu {
-        ul li {
-            margin: 0.5em;
+        ul, li {
+            // padding-inline-start: inherit;
+            // margin: 0.5em;
         }
     }
 }
