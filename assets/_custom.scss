@@ -8,25 +8,36 @@ main.container {
     font-family: "Microsoft YaHei", "Helvetica Neue", "Helvetica", "Segoe UI", "Arial", "freesans", "sans-serif";
     word-break: keep-all;
 
+
     a {
         color: #0055bb;
     }
 
-    .markdown code:not(pre code){
-        background-color: rgb(232,232,232);
-        // font-size: 1em;
-    }
+    .markdown {
+        code:not(pre code) {
+            background-color: rgb(232, 232, 232);
+            // font-size: 1em;
+        }
 
-    dl, ol, ul {
-        margin-bottom: 1rem;
-    }
+        dl,
+        ol,
+        ul {
+            margin-bottom: 1rem;
+        }
 
-    .book-menu {
-        ul, li {
-            // padding-inline-start: inherit;
-            // margin: 0.5em;
+        li p {
+            margin: 0px;
         }
     }
+
+    // .book-menu {
+
+    //     ul,
+    //     li {
+    //         // padding-inline-start: inherit;
+    //         // margin: 0.5em;
+    //     }
+    // }
 }
 
 #img-modal.modal {
